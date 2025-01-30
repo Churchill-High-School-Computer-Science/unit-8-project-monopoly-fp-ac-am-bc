@@ -6,14 +6,14 @@ public class Property {
     Color c;
     String name;
     int cost;
-    //...
+    int rent;
 
     // make constructior
-    public Property(Color c, String n, int chaching){
+    public Property(Color c, String n, int chaching, int r){
     this.c = c;
     this.name = n;
     this.cost = chaching;
-
+    this.rent = r;
 
     }
 
