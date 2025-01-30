@@ -6,8 +6,8 @@ public class Board {
 
         Display.properties = properties;
 
-        properties[0][0] = new Property(new Color(0, 255, 0), "Go", 0);
-        properties[0][1] = new Property(new Color(102, 51, 0), "Medditerranean", 60);
+        properties[0][0] = new Property(new Color(0, 255, 0), "Go", 0, 0);
+        properties[0][1] = new Property(new Color(102, 51, 0), "Medditerranean", 60, 2);
         properties[0][2] = new Property(new Color(255, 255, 255), "Community Chest", 0);
         properties[0][3] = new Property(new Color(102, 51, 0), "Baltic Ave", 60);
         properties[0][4] = new Property(new Color(255, 255, 255), "Income Tax", 0);
