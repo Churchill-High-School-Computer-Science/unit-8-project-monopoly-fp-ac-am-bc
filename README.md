@@ -55,6 +55,7 @@ Properties (in order)          Cost to buy          Base Rent           Color   
     Vermont Avenut                  100                 6                   (0,153,204)         50
     Connecticut Avenue              120                 8                   (0,153,204)         50
     Jail                            --                  --                  --                  --
+    
     St. Charles Place               140                 10                  (204,68,204)        100
     Electric Company                150                 2xdice              --                  --
     States Avenue                   140                 10                  (204,68,204)        100
