@@ -1,26 +1,39 @@
 
 import java.util.ArrayList;
 
+import javafx.scene.paint.Color;
+
 public class Player {
 
-    //TODO FIX
+    
+    int Money;
+    String player;
+    ArrayList<Property> ownedproperties = new ArrayList<Property>();
+    int location = 0;
+
+    // make constructior
+    public Player(String p){
+    this.player = p;
+    Money = 1500; 
+
+    }
+    
+    
     public String getName(){
-        return "no one";
+        return player;
     }
 
-    ///TODO FIX
+    
     public int getMoney(){
-        return 1000;
+        return Money;
     }
 
-    //TODO FIX
+    
     public ArrayList<Property> getProperties(){
-        return null;
+        return ownedproperties;
     }
 
-    //TODO FIX
-    //Go is the top left corner, location 0. Locations increase by 1 for each property that the player passes clockwise.
     public int getLocation(){
-        return 0;
+        return location;
     }
 }
