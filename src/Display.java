@@ -10,7 +10,7 @@ public class Display extends JFrame {
     static ArrayList<Player> players = new ArrayList<>(1);
     static JButton communityChest = new JButton("Community Chest");
     static JButton chance = new JButton("Chance");
-    static JLabel diceDisplay = new JLabel();
+    static JButton diceDisplay = new JButton("Roll Dice");
     static JFrame frame = new JFrame("Monopoly Game");
 
     static int squareLength = 75;
@@ -210,6 +210,34 @@ public class Display extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JOptionPane.showMessageDialog(frame, "Chance Button Clicked!");
+            }
+        });
+
+        diceDisplay.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(Monopoly.turn == 1){
+                    Monopoly.p1.playerMove();
+                    Monopoly.turn++;
+                }
+
+                else if(Monopoly.turn == 2){
+                    Monopoly.p2.playerMove();
+                    Monopoly.turn++;
+                }
+
+                else if(Monopoly.turn == 3){
+                    Monopoly.p3.playerMove();
+                    Monopoly.turn++;
+                }
+
+                else if(Monopoly.turn == 4){
+                    Monopoly.p4.playerMove();
+                    Monopoly.turn = 1;
+                }
+
+
+                
             }
         });
 

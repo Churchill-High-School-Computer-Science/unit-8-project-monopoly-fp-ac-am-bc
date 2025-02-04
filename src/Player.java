@@ -36,4 +36,22 @@ public class Player {
     public int getLocation(){
         return location;
     }
+
+    public int rollDice(){
+        int dice1=(int)(Math.random()*6+1);
+        int dice2=(int)(Math.random()*6+1);
+        int diceSum = dice1 + dice2;
+        return diceSum;
+    }
+
+    public void playerMove(){
+        location = rollDice() + location;
+        location = location % 40;
+        Display.boardPanel.repaint();
+    }
+
+
+
+
+
 }
