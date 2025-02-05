@@ -156,6 +156,9 @@ public class Display extends JFrame {
                     if(player.getProperties() != null && !player.getProperties().isEmpty()){
                         for(Property property : player.getProperties()){
                             g2d.setColor(property.getColor());
+                            if(property.getColor().equals(new Color(255,255,255))){
+                                g2d.setColor(new Color(0,0,0));
+                            }
                             g2d.fillRect((int)(squareLength * 2) + playerOffset, squareLength * 4 + propertyOffset, squareLength, squareLength / 4);
 
                             // Draw property name

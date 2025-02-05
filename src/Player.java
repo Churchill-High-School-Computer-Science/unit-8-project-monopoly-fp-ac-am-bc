@@ -48,6 +48,23 @@ public class Player {
         location = rollDice() + location;
         location = location % 40;
         Display.boardPanel.repaint();
+        
+        Property tempprop = Board.propertiesMap.get(location);
+       if(tempprop.ownable == true){
+        int choice = Display.choice("Purchase", "do you want to buy?", new String[]{"yes", "no"});
+        if(choice == 0 && Money >= tempprop.cost){
+            Money -= tempprop.cost;
+            tempprop.ownable = false;
+            ownedproperties.add(tempprop);
+        }
+       
+    
+    
+    } 
+       
+       
+       
+        
     }
 
 

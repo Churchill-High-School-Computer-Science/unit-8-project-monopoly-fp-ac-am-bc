@@ -7,13 +7,15 @@ public class Property {
     String name;
     int cost;
     int rent;
+    boolean ownable;
 
     // make constructior
-    public Property(Color c, String n, int chaching, int r){
+    public Property(Color c, String n, int chaching, int r, boolean own){
     this.c = c;
     this.name = n;
     this.cost = chaching;
     this.rent = r;
+    this.ownable = own;
 
     }
 
