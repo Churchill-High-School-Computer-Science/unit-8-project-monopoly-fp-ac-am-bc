@@ -8,6 +8,7 @@ public class Property {
     int cost;
     int rent;
     boolean ownable;
+    Player owner = null;
 
     // make constructior
     public Property(Color c, String n, int chaching, int r, boolean own){

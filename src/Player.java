@@ -47,25 +47,28 @@ public class Player {
     public void playerMove(){
         location = rollDice() + location;
         location = location % 40;
+       Display.frame.repaint();
         Display.boardPanel.repaint();
         
         Property tempprop = Board.propertiesMap.get(location);
-       if(tempprop.ownable == true){
+       if(tempprop.ownable == true && tempprop.owner == null){
         int choice = Display.choice("Purchase", "do you want to buy?", new String[]{"yes", "no"});
         if(choice == 0 && Money >= tempprop.cost){
             Money -= tempprop.cost;
             tempprop.ownable = false;
             ownedproperties.add(tempprop);
+            tempprop.owner =  this;
+            Display.frame.repaint();
+            Display.boardPanel.repaint();
         }
-       
-    
-    
     } 
-       
-       
-       
-        
+    
+    if(tempprop.owner != null && !(tempprop.owner.equals(this))){
+        Money -= tempprop.rent;
+        Display.frame.repaint();
+        Display.boardPanel.repaint();
     }
+}
 
 
 
