@@ -1,6 +1,8 @@
 
 import java.util.ArrayList;
 
+import javax.swing.JOptionPane;
+
 import javafx.scene.paint.Color;
 
 public class Player {
@@ -68,6 +70,15 @@ public class Player {
         Display.frame.repaint();
         Display.boardPanel.repaint();
     }
+
+    if (tempprop.getName().equals("Community Chest")){
+        for (int i = 0; i < Board.communityChest.size(); i++)  
+        { 
+            int random = (int)(Math.random() * Board.communityChest.size()); 
+            System.out.println("Random Element is :" + Board.communityChest.get(random).getcardname());
+            JOptionPane.showMessageDialog(frame, "Community Chest Button Clicked!");
+        }
+}
 }
 
 

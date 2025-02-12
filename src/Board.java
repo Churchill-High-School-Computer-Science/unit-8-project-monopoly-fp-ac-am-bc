@@ -1,7 +1,11 @@
 import java.awt.Color;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+
+import javax.smartcardio.Card;
 public class Board {
+    public static ArrayList<Cards> communityChest = new ArrayList<Cards>();
     Property[][] properties = new Property [11][11];
     static Map<Integer, Property>propertiesMap = new HashMap<>();
 
@@ -134,6 +138,23 @@ public class Board {
         properties[0][1] = new Property(new Color(46, 57, 248), "Board Walk", 400, 50, true);
         propertiesMap.put(39, properties[0][1]);
 
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+         
+        communityChest.add(new Cards("Bank error", 0, 200, false ));
+        communityChest.add(new Cards("Your lucky day", 0, 50, false ));
+        communityChest.add(new Cards("Tax refund", 0, 100, false ));
+        communityChest.add(new Cards("Its your birthday", 0, 10, true ));
+
+        communityChest.add(new Cards("School fieldtrip", 50, 0, false ));
+        communityChest.add(new Cards("You get robbed", 100, 0, false ));
+        communityChest.add(new Cards("Doctors fee", 200, 0,false ));
+        communityChest.add(new Cards("Your so nice", 10, 0,true ));
+    
+        
+    
+    
+    
+    
     }
 }
 
