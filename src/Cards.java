@@ -17,6 +17,18 @@ public class Cards {
             return cardname;
         }
 
+        public int getgive(){
+            return give;
+        }
+
+        public int getget(){
+            return get;
+        }
+
+        public boolean getfromeveryplayer(){
+            return fromeveryplayer;
+        }
+
 
 
 

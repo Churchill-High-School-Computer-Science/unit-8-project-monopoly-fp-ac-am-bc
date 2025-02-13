@@ -140,15 +140,15 @@ public class Board {
 
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
          
-        communityChest.add(new Cards("Bank error", 0, 200, false ));
-        communityChest.add(new Cards("Your lucky day", 0, 50, false ));
-        communityChest.add(new Cards("Tax refund", 0, 100, false ));
-        communityChest.add(new Cards("Its your birthday", 0, 10, true ));
+        communityChest.add(new Cards("Bank error, receive $200", 0, 200, false ));
+        communityChest.add(new Cards("Your lucky day, you found $50", 0, 50, false ));
+        communityChest.add(new Cards("Tax refund, you get $100", 0, 100, false ));
+        communityChest.add(new Cards("Its your birthday, recieve $10 from every player", 0, 10, true ));
 
-        communityChest.add(new Cards("School fieldtrip", 50, 0, false ));
-        communityChest.add(new Cards("You get robbed", 100, 0, false ));
-        communityChest.add(new Cards("Doctors fee", 200, 0,false ));
-        communityChest.add(new Cards("Your so nice", 10, 0,true ));
+        communityChest.add(new Cards("School fieldtrip, pay $50", 50, 0, false ));
+        communityChest.add(new Cards("You get robbed, you lose $100", 100, 0, false ));
+        communityChest.add(new Cards("Doctors fee, pay $200", 200, 0,false ));
+        communityChest.add(new Cards("Your so nice, pay every player $10", 10, 0,true ));
     
         
     

@@ -49,6 +49,7 @@ public class Player {
     public void playerMove(){
         location = rollDice() + location;
         location = location % 40;
+        //location = 2; 
        Display.frame.repaint();
         Display.boardPanel.repaint();
         
@@ -72,13 +73,33 @@ public class Player {
     }
 
     if (tempprop.getName().equals("Community Chest")){
-        for (int i = 0; i < Board.communityChest.size(); i++)  
-        { 
-            int random = (int)(Math.random() * Board.communityChest.size()); 
-            System.out.println("Random Element is :" + Board.communityChest.get(random).getcardname());
-            JOptionPane.showMessageDialog(frame, "Community Chest Button Clicked!");
+        
+         int random = (int)(Math.random() * Board.communityChest.size()); 
+           Cards c = Board.communityChest.get(random);
+           //Cards c = Board.communityChest.get(3);
+            Display.inform(c.getcardname());
+        if(c.getfromeveryplayer() == false){
+            Money += c.getget();
+            Money -= c.getgive();
+
+            Display.frame.repaint();
+            Display.boardPanel.repaint();
         }
-}
+            if(c.getfromeveryplayer() == true){
+               for(Player p: Monopoly.players){
+                if(p != this){
+                    p.Money += c.getgive();
+                    p.Money -= c.getget();
+
+                    Money += c.getget();
+                    Money -= c.getgive();
+
+                    Display.frame.repaint();
+                    Display.boardPanel.repaint();
+                }
+               } 
+            }
+    }
 }
 
 
